@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Brewman v7 Tools",
+    "version": "1.0",
+    "description": "QoL changes to the Brewman v7 website",
+    "permissions": [
+       "storage",
+       "tabs"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/jquery-3.7.1.min.js",
+                "scripts/waitForKeyElements.js",
+                "scripts/waitForBrewmanLoad.js",
+                "scripts/minimize.js",
+                "scripts/searchFilter.js",
+                "scripts/existingOrderWarning.js"
+            ],
+            "matches": ["https://brewman.premiersystems.com/*"]
+        }
+    ],
+    "background": {
+        "service_worker": "background/background.js"
+    }, 
+    "action": {
+        "default_popup": "popup/popup.html"
+    },
+    "options_page": "options/options.html"
+}
