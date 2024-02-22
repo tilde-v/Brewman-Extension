@@ -1,6 +1,6 @@
 function waitForBrewmanLoad (actionFunction, delay) {
-    // Default delay of 1 second
-    if (!delay) {delay = 1000}
+    // Default delay of 0.5 seconds
+    if (!delay) {delay = 0.5}
     
     // Check for loading dialog after delay
     // Initial delay allows time for loading dialog to first appear
