@@ -10,12 +10,13 @@
     "content_scripts": [
         {
             "js": [
-                "scripts/jquery-3.7.1.min.js",
-                "scripts/waitForKeyElements.js",
-                "scripts/waitForBrewmanLoad.js",
+                "scripts/utils/jquery-3.7.1.min.js",
+                "scripts/utils/waitForKeyElements.js",
+                "scripts/utils/waitForBrewmanLoad.js",
                 "scripts/minimize.js",
                 "scripts/searchFilter.js",
-                "scripts/existingOrderWarning.js"
+                "scripts/existingOrderWarning.js",
+                "scripts/discountWarning.js"
             ],
             "matches": ["https://brewman.premiersystems.com/*"]
         }
