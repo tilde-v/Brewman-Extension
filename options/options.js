@@ -1,36 +1,36 @@
 function restoreOptions () {
     chrome.storage.local.get(null, (data) => {
         document.getElementById("api-key").value = data["apiKey"];
-        document.getElementById("minimize-crm-log-communication").checked = data["minimize_crm"]["log_communication"];
-        document.getElementById("minimize-crm-activity-log").checked = data["minimize_crm"]["activity_log"];
-        document.getElementById("minimize-crm-outlet-summary").checked = data["minimize_crm"]["outlet_summary"];
-        document.getElementById("minimize-crm-contacts").checked = data["minimize_crm"]["contacts"];
-        document.getElementById("minimize-crm-upcoming-tasks-and-sales-visits").checked = data["minimize_crm"]["upcoming_tasks_and_sales_visits"];
-        document.getElementById("minimize-crm-recently-ordered-products").checked = data["minimize_crm"]["recently_ordered_products"];
-        document.getElementById("minimize-crm-recent-orders").checked = data["minimize_crm"]["recent_orders"];
-        document.getElementById("minimize-crm-recent-credit-notes").checked = data["minimize_crm"]["recent_credit_notes"];
-        document.getElementById("minimize-crm-containers-at-outlet").checked = data["minimize_crm"]["containers_at_outlet"];
-        document.getElementById("discount-warning").checked = data["discount_warning"];
-        document.getElementById("discount-warning-text").value = data["discount_warning_text"];
+        document.getElementById("minimize-crm-log-communication").checked = data["minimizeCRM"]["logCommunication"];
+        document.getElementById("minimize-crm-activity-log").checked = data["minimizeCRM"]["activityLog"];
+        document.getElementById("minimize-crm-outlet-summary").checked = data["minimizeCRM"]["outletSummary"];
+        document.getElementById("minimize-crm-contacts").checked = data["minimizeCRM"]["contacts"];
+        document.getElementById("minimize-crm-upcoming-tasks-and-sales-visits").checked = data["minimizeCRM"]["upcomingTasksAndSalesVisits"];
+        document.getElementById("minimize-crm-recently-ordered-products").checked = data["minimizeCRM"]["recentlyOrderedProducts"];
+        document.getElementById("minimize-crm-recent-orders").checked = data["minimizeCRM"]["recentOrders"];
+        document.getElementById("minimize-crm-recent-credit-notes").checked = data["minimizeCRM"]["recentCreditNotes"];
+        document.getElementById("minimize-crm-containers-at-outlet").checked = data["minimizeCRM"]["containersAtOutlet"];
+        document.getElementById("discount-warning").checked = data["discountWarning"];
+        document.getElementById("discount-warning-text").value = data["discountWarningText"];
     });
 };
 
 function saveOptions () {
     chrome.storage.local.set({
         apiKey: document.getElementById("api-key").value,
-        minimize_crm: {
-            log_communication: document.getElementById("minimize-crm-log-communication").checked,
-            activity_log: document.getElementById("minimize-crm-activity-log").checked,
-            outlet_summary: document.getElementById("minimize-crm-outlet-summary").checked,
+        minimizeCRM: {
+            logCommunication: document.getElementById("minimize-crm-log-communication").checked,
+            activityLog: document.getElementById("minimize-crm-activity-log").checked,
+            outletSummary: document.getElementById("minimize-crm-outlet-summary").checked,
             contacts: document.getElementById("minimize-crm-contacts").checked,
-            upcoming_tasks_and_sales_visits: document.getElementById("minimize-crm-upcoming-tasks-and-sales-visits").checked,
-            recently_ordered_products: document.getElementById("minimize-crm-recently-ordered-products").checked,
-            recent_orders: document.getElementById("minimize-crm-recent-orders").checked,
-            recent_credit_notes: document.getElementById("minimize-crm-recent-credit-notes").checked,
-            containers_at_outlet: document.getElementById("minimize-crm-containers-at-outlet").checked
+            upcomingTasksAndSalesVisits: document.getElementById("minimize-crm-upcoming-tasks-and-sales-visits").checked,
+            recentlyOrderedProducts: document.getElementById("minimize-crm-recently-ordered-products").checked,
+            recentRrders: document.getElementById("minimize-crm-recent-orders").checked,
+            recentCreditNotes: document.getElementById("minimize-crm-recent-credit-notes").checked,
+            containersAtOutlet: document.getElementById("minimize-crm-containers-at-outlet").checked
         },
-        discount_warning: document.getElementById("discount-warning").checked,
-        discount_warning_text: document.getElementById("discount-warning-text").value
+        discountWarning: document.getElementById("discount-warning").checked,
+        discountWarningText: document.getElementById("discount-warning-text").value
     }, () => {});
     document.getElementById("status").innerText = "Saved!";
 };
