@@ -10,6 +10,8 @@ function restoreOptions () {
         document.getElementById("minimize-crm-recent-orders").checked = data["minimize_crm"]["recent_orders"];
         document.getElementById("minimize-crm-recent-credit-notes").checked = data["minimize_crm"]["recent_credit_notes"];
         document.getElementById("minimize-crm-containers-at-outlet").checked = data["minimize_crm"]["containers_at_outlet"];
+        document.getElementById("discount-warning").checked = data["discount_warning"];
+        document.getElementById("discount-warning-text").value = data["discount_warning_text"];
     });
 };
 
@@ -26,7 +28,9 @@ function saveOptions () {
             recent_orders: document.getElementById("minimize-crm-recent-orders").checked,
             recent_credit_notes: document.getElementById("minimize-crm-recent-credit-notes").checked,
             containers_at_outlet: document.getElementById("minimize-crm-containers-at-outlet").checked
-        }
+        },
+        discount_warning: document.getElementById("discount-warning").checked,
+        discount_warning_text: document.getElementById("discount-warning-text").value
     }, () => {});
     document.getElementById("status").innerText = "Saved!";
 };
