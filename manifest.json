@@ -3,6 +3,9 @@
     "name": "Brewman v7 Tools",
     "version": "1.0",
     "description": "QoL changes to the Brewman v7 website",
+    "icons": {
+        "128": "images/icon-128.png"
+    }, 
     "permissions": [
        "storage",
        "tabs"
