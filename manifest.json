@@ -7,8 +7,7 @@
         "128": "images/icon-128.png"
     }, 
     "permissions": [
-       "storage",
-       "tabs"
+       "storage"
     ],
     "content_scripts": [
         {
@@ -17,7 +16,6 @@
                 "scripts/utils/waitForKeyElements.js",
                 "scripts/utils/waitForBrewmanLoad.js",
                 "scripts/minimize.js",
-                "scripts/searchFilter.js",
                 "scripts/existingOrderWarning.js",
                 "scripts/discountWarning.js"
             ],
