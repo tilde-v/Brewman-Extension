@@ -14,7 +14,8 @@ chrome.runtime.onInstalled.addListener(function (details) {
                 containersAtOutlet: true
             },
             discountWarning: true,
-            discountWarningText: "<h2>SET DISCOUNT BASIS TO <b>£ PER B. BARREL</b>, NOT %!!</h2>"
+            discountWarningText: "<h2>SET DISCOUNT BASIS TO <b>£ PER B. BARREL</b>, NOT %!!</h2>",
+            activityLogTab: "communications"
         });
     }
 });

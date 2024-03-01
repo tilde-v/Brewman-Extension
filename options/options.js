@@ -12,6 +12,7 @@ function restoreOptions () {
         document.getElementById("minimize-crm-containers-at-outlet").checked = data["minimizeCRM"]["containersAtOutlet"];
         document.getElementById("discount-warning").checked = data["discountWarning"];
         document.getElementById("discount-warning-text").value = data["discountWarningText"];
+        document.getElementById(data["activityLogTab"]).checked = true;
     });
 };
 
@@ -30,7 +31,8 @@ function saveOptions () {
             containersAtOutlet: document.getElementById("minimize-crm-containers-at-outlet").checked
         },
         discountWarning: document.getElementById("discount-warning").checked,
-        discountWarningText: document.getElementById("discount-warning-text").value
+        discountWarningText: document.getElementById("discount-warning-text").value,
+        activityLogTab: document.querySelector("input[name='activity-log-tab']:checked").id
     }, () => {});
     document.getElementById("status").innerText = "Saved!";
 };

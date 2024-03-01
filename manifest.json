@@ -17,7 +17,8 @@
                 "scripts/utils/waitForBrewmanLoad.js",
                 "scripts/minimize.js",
                 "scripts/existingOrderWarning.js",
-                "scripts/discountWarning.js"
+                "scripts/discountWarning.js",
+                "scripts/defaultActivityTab.js"
             ],
             "matches": ["https://brewman.premiersystems.com/*"]
         }
