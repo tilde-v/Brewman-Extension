@@ -8,8 +8,8 @@ chrome.runtime.onInstalled.addListener(function (details) {
                 outletSummary: true,
                 contacts: true,
                 upcomingTasksAndSalesVisits: true,
-                recentlyOrderedProducts: true,
-                recentOrders: false,
+                recentlyOrderedProducts: false,
+                recentOrders: true,
                 recentCreditNotes: true,
                 containersAtOutlet: true
             },
