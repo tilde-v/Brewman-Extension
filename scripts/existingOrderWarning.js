@@ -31,7 +31,7 @@ function showWarning () {
                 let outletId = url[2];
                 let d = new Date();
                 d.setMonth(d.getMonth() - 3);
-                let dateFilter = d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate(); 
+                let dateFilter = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); 
                 return fetch("https://brewman.premiersystems.com/webapi/order/v1/getOrdersByFilter", {
                     method: "POST",
                     headers: {
