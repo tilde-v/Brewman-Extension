@@ -68,7 +68,7 @@ function showWarning () {
                     data["results"]["orders"].forEach((value, index, array) => {
                         console.log(value);
                         let orderLink = document.createElement("a");
-                        orderLink.setAttribute("href", "https://brewman.premiersystems.com/orders/" + value["header"]["readOnly"]["id"] + "/view");
+                        orderLink.setAttribute("href", "https://brewman.premiersystems.com/orders/view-order/" + value["header"]["readOnly"]["id"]);
                         orderLink.innerText = value["header"]["readOnly"]["orderNumber"];
                         orderWarningWrapper.append(orderLink);
                         if (index + 1 != array.length) {
